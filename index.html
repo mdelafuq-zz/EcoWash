@@ -32,6 +32,7 @@
 		<link rel="stylesheet" href="css/theme-blog.css">
 		<link rel="stylesheet" href="css/theme-shop.css">
 		<link rel="stylesheet" href="css/theme-animate.css">
+		<link rel="stylesheet" href="css/app.css">
 
 		<!-- Skin CSS -->
 		<link rel="stylesheet" href="css/skins/default.css">
@@ -96,129 +97,92 @@
 				</div>
 			</header>
 
-			<div role="main" class="main" id="app-container">
-
+			<div role="main" class="main" id="app-container" style="padding-bottom:150px; padding-top:20px">
 				<div class="container">
-
 					<div class="row">
-						<div class="col-md-12">
 
-							<div class="featured-boxes">
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="featured-box featured-box-primary align-left mt-xlg">
-											<div class="box-content">
-												<h4 class="heading-primary text-uppercase mb-md">Iniciar sesión</h4>
-												<form action="/" id="login-form" method="post">
-													<div class="row">
-														<div class="form-group">
-															<div class="col-md-12">
-																<label>Nombre de usuario o correo</label>
-																<input type="text" value="" class="form-control input-lg" name="Email">
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="form-group">
-															<div class="col-md-12">
-																<label>Contraseña</label>
-																<input type="password" value="" class="form-control input-lg" name="Password">
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-md-12">
-															<input type="submit" value="Login" class="btn btn-primary pull-right mb-xl" data-loading-text="Cargando...">
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="featured-box featured-box-primary align-left mt-xlg">
-											<div class="box-content">
-												<h4 class="heading-primary text-uppercase mb-md">Register An Account</h4>
-												<form action="/" id="frmSignUp" method="post">
-													<div class="row">
-														<div class="form-group">
-															<div class="col-md-12">
-																<label>E-mail Address</label>
-																<input type="email" value="" class="form-control input-lg" name="Email">
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="form-group">
-															<div class="col-md-12">
-																<label>Nombre</label>
-																<input type="text" value="" class="form-control input-lg" name="Name">
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="form-group">
-															<div class="col-md-6">
-																<label>Apellido paterno</label>
-																<input type="text" value="" class="form-control input-lg" name="FirstLastName">
-															</div>
-															<div class="col-md-6">
-																<label>Apellido materno</label>
-																<input type="text" value="" class="form-control input-lg" name="SecondLastName">
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="form-group">
-															<div class="col-md-6">
-																<label>Password</label>
-																<input type="password" value="" class="form-control input-lg" name="Password">
-															</div>
-															<div class="col-md-6">
-																<label>Re-enter Password</label>
-																<input type="password" value="" class="form-control input-lg" name="ConfirmPassword">
-															</div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-md-12">
-															<input type="submit" value="Register" class="btn btn-primary pull-right mb-xl" data-loading-text="Loading...">
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-									</div>
-								</div>
+						<div class="col-md-3">
+							<aside class="sidebar" id="sidebar" data-plugin-sticky data-plugin-options='{"minWidth": 991, "containerSelector": ".container", "padding": {"top": 110}}'>
 
-							</div>
+								<h4>Valoramos tu opinión</h4>
+								<p>En Eco Wash nos importa tu opinión, por eso te agradecemos que contestes nuestra encuesta de servicio.</p>
+
+								<a class="btn btn-lg btn-primary mb-lg" href="contact-us.html">Contact Us Now!</a>
+								
+							</aside>
+						</div>
+						<div class="col-md-9">
+							<!-- <input type="radio" name="happyRadio" value="1"> Si
+							<input type="radio" name="happyRadio" value="0"> No -->
+							<form>
+								<ul class="list list-icons">
+									<li><i class="fa fa-leaf"></i> ¿Está contento con el servicio que Eco WASH le brinda? (SI/NO) * queja por correo</li>
+									<li>
+										<div class="radio-custom radio-success">
+											<input type="radio" id="radioExample3" name="radioExample">
+											<label for="radioExample3">Si</label>
+										</div>
+										<div class="radio-custom radio-danger">
+											<input type="radio" id="radioExample4" name="radioExample">
+											<label for="radioExample4">No</label>
+										</div>
+										
+									</li>
+									<li><i class="fa fa-leaf"></i> ¿Es tratado correctamente por nuestros empleados? (SI/NO)</li>
+									<li>
+										<div class="radio-custom radio-success">
+											<input type="radio" id="radioExample3" name="radioExample">
+											<label for="radioExample3">Si</label>
+										</div>
+										<div class="radio-custom radio-danger">
+											<input type="radio" id="radioExample4" name="radioExample">
+											<label for="radioExample4">No</label>
+										</div>
+									</li>
+									<li><i class="fa fa-leaf"></i> ¿Se adapta a su economía nuestros precios y promociones? (SI/NO)</li>
+									<li>
+										<div class="radio-custom radio-success">
+											<input type="radio" id="radioExample3" name="radioExample">
+											<label for="radioExample3">Si</label>
+										</div>
+										<div class="radio-custom radio-danger">
+											<input type="radio" id="radioExample4" name="radioExample">
+											<label for="radioExample4">No</label>
+										</div>
+									</li>
+									<li><i class="fa fa-leaf"></i> ¿Asiste a nuestras conferencias y talleres? (SI/NO) * SI - mensaje de agradecimiento</li>
+									<li>
+										<div class="radio-custom radio-success">
+											<input type="radio" id="radioExample3" name="radioExample">
+											<label for="radioExample3">Si</label>
+										</div>
+										<div class="radio-custom radio-danger">
+											<input type="radio" id="radioExample4" name="radioExample">
+											<label for="radioExample4">No</label>
+										</div>
+									</li>
+									<li><i class="fa fa-leaf"></i> ¿En qué aspecto cree usted nuestra empresa puede mejorar? (Textarea)</li>
+									<textarea placeholder="Abrir los domingos" class="form-control" rows="3"></textarea>
+									<li><i class="fa fa-leaf"></i> Al finalizar un mensaje que diga gracias por ayudarnos a mejorar</li>
+
+								</ul>
+							</form>
 						</div>
 					</div>
-
-				</div>
 
 			</div>
 
 			<footer id="footer" style='padding:0; bottom:0; position:fixed; width:100%'>
-				<div class="footer-copyright">
+				<div class="footer-copyright" style="margin-top:0;">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-1">
+							<div class="col-xs-5">
 								<a href="index.html" class="logo">
 									<img alt="Porto Website Template" class="img-responsive" src="img/logo-footer.png">
 								</a>
 							</div>
-							<div class="col-md-7">
+							<div class="col-xs-7">
 								<p>© Copyright 2015. All Rights Reserved.</p>
-							</div>
-							<div class="col-md-4">
-								<nav id="sub-menu">
-									<ul>
-										<li><a href="page-faq.html">FAQ's</a></li>
-										<li><a href="sitemap.html">Sitemap</a></li>
-										<li><a href="contact-us.html">Contact</a></li>
-									</ul>
-								</nav>
 							</div>
 						</div>
 					</div>
@@ -254,7 +218,7 @@
 		<script src="js/sammy.js"></script>
 		<script src="js/app.js"></script>
 		<script>
-			app.Start()
+			// app.Start()
 		</script>
 
 
