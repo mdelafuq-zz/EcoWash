@@ -36,13 +36,13 @@
 					<div class="col-sm-6">
 						<div class="featured-box featured-box-primary align-left mt-xlg">
 							<div class="box-content">
-								<h4 class="heading-primary text-uppercase mb-md">Register An Account</h4>
-								<form action="/" id="frmSignUp" method="post">
+								<h4 class="heading-primary text-uppercase mb-md">Registrate</h4>
+								<form id="signup-form">
 									<div class="row">
 										<div class="form-group">
 											<div class="col-md-12">
-												<label>E-mail Address</label>
-												<input type="email" value="" class="form-control input-lg" name="Email">
+												<label>E-mail</label>
+												<input type="email" value="" class="form-control input-lg" name="Email" required>
 											</div>
 										</div>
 									</div>
@@ -50,7 +50,7 @@
 										<div class="form-group">
 											<div class="col-md-12">
 												<label>Nombre</label>
-												<input type="text" value="" class="form-control input-lg" name="Name">
+												<input type="text" value="" class="form-control input-lg" name="Name" required>
 											</div>
 										</div>
 									</div>
@@ -58,11 +58,11 @@
 										<div class="form-group">
 											<div class="col-md-6">
 												<label>Apellido paterno</label>
-												<input type="text" value="" class="form-control input-lg" name="FirstLastName">
+												<input type="text" value="" class="form-control input-lg" name="FirstLastName" required>
 											</div>
 											<div class="col-md-6">
 												<label>Apellido materno</label>
-												<input type="text" value="" class="form-control input-lg" name="SecondLastName">
+												<input type="text" value="" class="form-control input-lg" name="SecondLastName" required>
 											</div>
 										</div>
 									</div>
@@ -70,17 +70,17 @@
 										<div class="form-group">
 											<div class="col-md-6">
 												<label>Password</label>
-												<input type="password" value="" class="form-control input-lg" name="Password">
+												<input type="password" value="" class="form-control input-lg" name="Password" required>
 											</div>
 											<div class="col-md-6">
 												<label>Re-enter Password</label>
-												<input type="password" value="" class="form-control input-lg" name="ConfirmPassword">
+												<input type="password" value="" class="form-control input-lg" id="ConfirmPassword" required>
 											</div>
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-md-12">
-											<input type="submit" value="Register" class="btn btn-primary pull-right mb-xl" data-loading-text="Loading...">
+											<input type="submit" value="Registrar" class="btn btn-primary pull-right mb-xl" data-loading-text="Loading...">
 										</div>
 									</div>
 								</form>
