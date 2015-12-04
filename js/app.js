@@ -1,6 +1,6 @@
 var app = {
-    BaseUrl: 'http://192.168.0.8:1789/',
-    // BaseUrl: 'http://ecowash.apphb.com/',
+    // BaseUrl: 'http://192.168.0.8:1789/',
+    BaseUrl: 'http://ecowash.apphb.com/',
     Sammy: null,
     Render: {},
     Services: {
@@ -76,6 +76,58 @@ app.Logout = function(){
             },
         }
     })
+}
+
+app.Init = function(){
+	$('[data-plugin-counter]:not(.manual), .counters [data-to]').each(function() {
+		var $this = $(this),
+			opts;
+
+		var pluginOptions = $this.data('plugin-options');
+		if (pluginOptions)
+			opts = pluginOptions;
+
+		$this.themePluginCounter(opts);
+	});
+
+	$('[data-plugin-animate], [data-appear-animation]').each(function() {
+		var $this = $(this),
+			opts;
+
+		var pluginOptions = $this.data('plugin-options');
+		if (pluginOptions)
+			opts = pluginOptions;
+
+		$this.themePluginAnimate(opts);
+	});
+
+	$('[data-plugin-word-rotate]:not(.manual), .word-rotate:not(.manual)').each(function() {
+		var $this = $(this),
+			opts;
+
+		var pluginOptions = $this.data('plugin-options');
+		if (pluginOptions)
+			opts = pluginOptions;
+
+		$this.themePluginWordRotate(opts);
+	});
+
+	$('[data-plugin-sticky]:not(.manual)').each(function() {
+		var $this = $(this),
+			opts;
+
+		var pluginOptions = $this.data('plugin-options');
+		if (pluginOptions)
+			opts = pluginOptions;
+
+		$this.themePluginSticky(opts);
+	});
+
+}
+
+app.SetActiveButton = function (button){
+	$('.menu-button').removeClass('active')
+	$(button).addClass('active')
 }
 
 // Services
@@ -251,6 +303,8 @@ app.Render.Surveys = function(){
 		html += "<\/div>";
 
 	app.Sammy.swap(html, function () {
+		app.Init()
+		app.SetActiveButton('#surveybutton')
     })
 }
 
@@ -315,6 +369,8 @@ app.Render.Home = function(){
 		html += "<\/div>";
 
 		app.Sammy.swap(html, function () {
+			app.Init()
+			app.SetActiveButton('#homebutton')		
 		})
 }
 
