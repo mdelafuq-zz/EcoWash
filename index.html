@@ -43,48 +43,94 @@
 	</head>
 	<body>
 		<div class="body">
-			<header id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 0, "stickySetTop": "0px", "stickyChangeLogo": false}' style="height:85px; max-height:85px; min-height:85px">
-				<div class="header-body" style="height:85px; max-height:85px; min-height:85px; padding: 0">
-					<div class="header-container container">
-						<div class="header-row">
-							<div class="header-column">
-								<div class="header-logo">
-									<a href="index.html">
-										<img alt="Porto" width="111" height="54" data-sticky-width="82" data-sticky-height="40" data-sticky-top="33" src="img/logo-eco.png">
-									</a>
-								</div>
-							</div>
-							<div class="header-column">
-								<div class="header-row">
-									<div class="header-nav">
-										<button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
-											<i class="fa fa-bars"></i>
-										</button>
-										<ul class="header-social-icons social-icons hidden-xs">
-											<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-											<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-											<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-										</ul>
-										<div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
-											<nav>
-												<ul class="nav nav-pills" id="mainNav">
-													<li class="active menu-button" id="homebutton">
-														<a class="" href="#/home">
-															EcoWash
-														</a>
-													</li>
-													<li id="promobutton" class="menu-button">
-														<a class="" href="index.html">
-															Promociones
-														</a>
-													</li>
-													<li id="surveybutton" class="menu-button">
-														<a class="" href="#/encuesta">
-															Encuesta de servicio
-														</a>
-													</li>
-												</ul>
-											</nav>
+			<div role="main" class="main" id="app-container" style="padding-bottom:150px; padding-top:20px">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="featured-boxes">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="featured-box featured-box-primary align-left mt-xlg">
+											<div class="box-content">
+												<h4 class="heading-primary text-uppercase mb-md">Iniciar sesión</h4>
+												<form action="/" id="login-form" method="post">
+													<div class="row">
+														<div class="form-group">
+															<div class="col-md-12">
+																<label>Nombre de usuario o correo</label>
+																<input type="text" value="" class="form-control input-lg" name="Email">
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="form-group">
+															<div class="col-md-12">
+																<label>Contraseña</label>
+																<input type="password" value="" class="form-control input-lg" name="Password">
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-12">
+															<input type="submit" value="Login" class="btn btn-primary pull-right mb-xl" data-loading-text="Cargando...">
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="featured-box featured-box-primary align-left mt-xlg">
+											<div class="box-content">
+												<h4 class="heading-primary text-uppercase mb-md">Registrate</h4>
+												<form id="signup-form">
+													<div class="row">
+														<div class="form-group">
+															<div class="col-md-12">
+																<label>E-mail</label>
+																<input type="email" value="" class="form-control input-lg" name="Email" required>
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="form-group">
+															<div class="col-md-12">
+																<label>Nombre</label>
+																<input type="text" value="" class="form-control input-lg" name="Name" required>
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="form-group">
+															<div class="col-md-6">
+																<label>Apellido paterno</label>
+																<input type="text" value="" class="form-control input-lg" name="FirstLastName" required>
+															</div>
+															<div class="col-md-6">
+																<label>Apellido materno</label>
+																<input type="text" value="" class="form-control input-lg" name="SecondLastName" required>
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="form-group">
+															<div class="col-md-6">
+																<label>Password</label>
+																<input type="password" value="" class="form-control input-lg" name="Password" required>
+															</div>
+															<div class="col-md-6">
+																<label>Re-enter Password</label>
+																<input type="password" value="" class="form-control input-lg" id="ConfirmPassword" required>
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-12">
+															<input type="submit" value="Registrar" class="btn btn-primary pull-right mb-xl" data-loading-text="Loading...">
+														</div>
+													</div>
+												</form>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -92,98 +138,7 @@
 						</div>
 					</div>
 				</div>
-			</header>
-
-
-
-
-			<div role="main" class="main" id="app-container" style="padding-bottom:150px; padding-top:20px">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 center">
-							<h2 class="word-rotator-title mb-sm">Eco Wash es el car wash <strong>mas <span class="word-rotate" data-plugin-options='{"delay": 2000, "animDelay": 300}'>
-								<span class="word-rotate-items">
-									<span>popular</span>
-									<span>ecológico</span>
-									<span>increíble</span>
-								</span>
-							</span></strong> de Hermosillo.</h2>
-							<p class="lead">Cuidando el medio ambiente, a la vez<br>que generamos empleo en la ciudad.</p>
-						</div>
-					</div>
-
-					<div class="row mt-xl">
-						<div class="counters counters-text-dark">
-							<div class="col-md-4 col-sm-6">
-								<div class="counter appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300">
-									<i class="fa fa-user"></i>
-									<strong data-to="3" >0</strong>
-									<label>Arboles</label>
-									<p class="text-color-primary mb-xl">liberando óxigeno</p>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6">
-								<div class="counter appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="600">
-									<i class="fa fa-desktop"></i>
-									<strong data-to="12" data-append="%">0</strong>
-									<label>De tu consumo de óxigeno</label>
-									<p class="text-color-primary mb-xl">diario es lo que liberan tus arboles</p>
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-6">
-								<div class="counter appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="900">
-									<i class="fa fa-ticket"></i>
-									<strong data-to="3">0</strong>
-									<label>lavadas</label>
-									<p class="text-color-primary mb-xl">para el siguiente arbol</p>
-
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
 			</div>
-
-
-
-
-			<footer id="footer" style='padding:0; bottom:0; position:fixed; width:100%; z-index:1000'>
-				<div class="footer-copyright" style="margin-top:0;">
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-5">
-								<a href="index.html" class="logo">
-									<img alt="Porto Website Template" class="img-responsive" src="img/logo-footer.png">
-								</a>
-							</div>
-							<div class="col-xs-7">
-								<p>© Copyright 2015. All Rights Reserved.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
-
-
-			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			  <div class="modal-dialog" role="document">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			        <h4 class="modal-title" id="myModalLabel">Eco WASH</h4>
-			      </div>
-			      <div class="modal-body">
-			         <h3>Gracias por ayudarnos a mejorar</h3>
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			      </div>
-			    </div>
-			  </div>
-			</div>
-
-
 		</div>
 
 		<!-- Vendor -->
@@ -213,9 +168,94 @@
 		<script src="js/theme.init.js"></script>
 
 		<script src="js/sammy.js"></script>
-		<script src="js/app.js"></script>
+		<!-- <script src="js/app.js"></script> -->
 		<script>
-			 app.Start()
+		(function(){
+
+			var app = {
+			    BaseUrl: 'http://192.168.0.10:1789/',
+			}
+
+			var token = localStorage['session-token']
+		    if(token){
+		    	window.location = 'http://localhost/ecowash/clientindex.html'
+		    }
+
+			$.fn.serializeObject = function () {
+			    var o = {}
+			    var a = this.serializeArray()
+			    $.each(a, function () {
+			        if (o[this.name] !== undefined) {
+			            if (!o[this.name].push) {
+			                o[this.name] = [o[this.name]]
+			            }
+			            o[this.name].push(this.value || '')
+			        } else {
+			            o[this.name] = this.value || ''
+			        }
+			    })
+			    return o
+			}
+
+			function login(data){
+				$.ajax({
+			        url: app.BaseUrl + 'api/login',
+			        type: 'POST',
+			        contentType: 'application/json',
+			        data: JSON.stringify(data),
+			        statusCode: {
+			            200: function (response) {
+			            	console.log(response)
+			            	localStorage['session-token'] = response.Token
+			            	window.location = 'http://localhost/ecowash/clientindex.html'
+			            },
+			            400: function (response) {
+			            },
+			        }
+			    })
+			}
+
+			 $(document.body).on('submit', '#login-form', function (event) {
+			    event.preventDefault();
+			    var data = $(this).serializeObject()
+			    login(data)
+			})
+
+			 $(document.body).on('submit', '#signup-form', function (event) {
+			    event.preventDefault();
+			    console.log('will register')
+			    var form = $(this).serializeObject()
+			    var pass = form.Password
+			    var confirmPass = $('#ConfirmPassword').val()
+			    console.log(pass)
+			    console.log(confirmPass)
+
+			    if (pass !== confirmPass){
+			    	alert('Las contraseñas deben ser diferentes.')
+			    	return
+			    }
+
+			    $.ajax({
+			        url: app.BaseUrl + 'api/register',
+			        type: 'POST',
+			        contentType: 'application/json',
+			        data: JSON.stringify(form),
+			        statusCode: {
+			            200: function (response) {
+			            	var data = {
+			            		Email: data.Email,
+			            		Password: data.Password
+			            	}
+
+			            	login(data)
+			            },
+			            400: function (response) {
+			            },
+			        }
+			    })
+			})
+		})();
+			
 		</script>
 
 	</body>

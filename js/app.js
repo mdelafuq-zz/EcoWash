@@ -1,6 +1,6 @@
 var app = {
-    // BaseUrl: 'http://192.168.0.8:1789/',
-    BaseUrl: 'http://ecowash.apphb.com/',
+    BaseUrl: 'http://192.168.0.10:1789/',
+    // BaseUrl: 'http://ecowash.apphb.com/',
     Sammy: null,
     Render: {},
     Services: {
@@ -26,9 +26,8 @@ app.RegisterRoutes = function () {
 
     app.Sammy = $.sammy('#app-container', function () {
 
-        this.get('/', function (context) { window.location = '#/home' })
-        this.get('#/?', function (context) { window.location = '#/home' })
-
+        // this.get('/', function (context) { window.location = '#/home' })
+        // this.get('#/?', function (context) { window.location = '#/home' })
 
         this.get('#/home/?', function (context) { app.Render.Home() })
         this.get('#/encuesta/?', function (context) { app.Render.Surveys() })
@@ -163,8 +162,13 @@ app.Services.Post.PostSurvey = function(form){
         data: JSON.stringify(data),
         statusCode: {
             200: function (response) {
-            	$('#myModal').modal(options)
-            	window.location = '#/promotions'
+            	console.log(response)
+            	if (response.Coupon.GUID){
+            		var coupon = response.Coupon.GUID.slice(0,8)
+            		console.log(coupon)
+            	}
+            	// $('#myModal').modal(options)
+            	// window.location = '#/promotions'
             },
             400: function (response) {
             },
@@ -357,8 +361,13 @@ app.Render.Home = function(){
 		html += "			<div class=\"col-md-4 col-sm-6\">";
 		html += "				<div class=\"counter appear-animation\" data-appear-animation=\"fadeInUp\" data-appear-animation-delay=\"900\">";
 		html += "					<i class=\"fa fa-ticket\"><\/i>";
-		html += "					<strong data-to=\"3\">0<\/strong>";
-		html += "					<label>lavadas<\/label>";
+		html += "					<strong data-to=\"5\">0<\/strong>";
+		html += "					<i class=\"appear-animation fa fa-leaf fa-fw\" data-appear-animation=\"fadeInUp\" data-appear-animation-delay=\"1100\" style='font-size:13px; display:inline-block'></i>";
+		html += "					<i class=\"appear-animation fa fa-leaf fa-fw\" data-appear-animation=\"fadeInUp\" data-appear-animation-delay=\"1300\" style='font-size:13px; display:inline-block'></i>";
+		html += "					<i class=\"appear-animation fa fa-leaf fa-fw\" data-appear-animation=\"fadeInUp\" data-appear-animation-delay=\"1500\" style='font-size:13px; display:inline-block'></i>";
+		html += "					<i class=\"appear-animation fa fa-leaf fa-fw\" data-appear-animation=\"fadeInUp\" data-appear-animation-delay=\"1700\" style='font-size:13px; display:inline-block'></i>";
+		html += "					<i class=\"appear-animation fa fa-leaf fa-fw\" data-appear-animation=\"fadeInUp\" data-appear-animation-delay=\"1900\" style='font-size:13px; display:inline-block'></i>";
+		html += "					<label>EcoSellos<\/label>";
 		html += "					<p class=\"text-color-primary mb-xl\">para el siguiente arbol<\/p>";
 		html += "";
 		html += "				<\/div>";
@@ -505,11 +514,13 @@ $(document.body).on('submit', '#signup-form', function (event) {
 // Trees
 
 // Surveys
-$(document.body).on('click', '#send-survey', function (e) {
-	$('#survey-form').trigger('submit')
-})
+// $(document.body).on('click', '#send-survey', function (e) {
+// 	$('#survey-form').trigger('submit')
+// })
+
 $(document).on('submit', '#survey-form', function (e) {
 	e.preventDefault()
+	console.log('submited')
 	var form = $(this).serializeObject()
 	app.Services.Post.PostSurvey(form)
 	return
@@ -550,8 +561,6 @@ $(document).ajaxError(function (event, jqxhr, settings, exception) {
     }
 
     if (jqxhr.status == 417) {
-        localStorage.removeItem('ID')
-        window.location = '#/selecciona-residente';
     }
 
     if (jqxhr.status == 500) {
